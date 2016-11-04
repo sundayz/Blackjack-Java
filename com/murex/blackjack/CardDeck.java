@@ -30,11 +30,11 @@ public class CardDeck implements Deck {
 		return cards;
 	}
 	
-	public Card dealCard(){
+	public Card drawCard(){
 		Random rnd = new Random();
-		int n = rnd.nextInt(51) + 0;
+		int n = rnd.nextInt(cards.size() - 1);
 		
-		return cards.get(n);
+		return cards.remove(n);
 	}
 
 }
