@@ -1,7 +1,9 @@
 package com.murex.blackjack;
 
+import java.util.List;
+
 public interface Deck {
 	
-	public Card[] getCards();
+	public List<Card> getCards();
 
 }

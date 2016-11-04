@@ -2,23 +2,28 @@ package com.murex.blackjack;
 
 public class DefaultCard implements Card {
 
-	int cardValue;
-	Suit suitType;
+	private CardFace cardFace;
+	private Suit suitType;
 	
 	/* Constructor */
-	public DefaultCard(int value, Suit suit) {
-		cardValue = value;
-		suitType = suit;
+	public DefaultCard(CardFace cardFace, Suit suit) {
+		this.cardFace = cardFace;
+		this.suitType = suit;
 	}
 
 	@Override
 	public int getValue() {
-		return cardValue;
+		return cardFace.getValue();
 	}
 
 	@Override
 	public Suit getSuit() {
 		return suitType;
+	}
+	
+	@Override
+	public String toString() {
+		return cardFace.toString() + " of " + suitType.toString();
 	}
 	
 }
