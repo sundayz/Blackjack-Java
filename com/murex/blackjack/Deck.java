@@ -4,5 +4,4 @@ public interface Deck {
 	
 	public Card[] getCards();
 
-	
 }
