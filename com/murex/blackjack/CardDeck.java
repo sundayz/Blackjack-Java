@@ -2,6 +2,7 @@ package com.murex.blackjack;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
 
 public class CardDeck implements Deck {
 
@@ -27,6 +28,13 @@ public class CardDeck implements Deck {
 	@Override
 	public List<Card> getCards() {
 		return cards;
+	}
+	
+	public Card dealCard(){
+		Random rnd = new Random();
+		int n = rnd.nextInt(51) + 0;
+		
+		return cards.get(n);
 	}
 
 }
